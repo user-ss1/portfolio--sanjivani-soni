@@ -1,565 +1,1029 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Sanjivani Soni</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="tableaustyle.css"> -->
-</head>
-
-<body>
-    <header class="header">
-        <a href="#home" class="logo" style="text-transform:capitalize;"> sanjivani
-            <span>soni</span></a>
-
-        <i class="bx bx-menu" id="menu-icon"></i>
-
-        <nav class="navbar" style="text-transform:capitalize;">
-            <a href="#home" class="active">Home</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#visulizations">Visulization's</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-        <!-- s -->
-    </header>
-
-    <section class="home" id="home">
-
-        <div class="home-content">
-
-            <h1 style="text-transform:capitalize;">hi,it's <span> sanjivani soni</span></h1>
-            <h3 class="text-animation">I'm a <span>
-
-                </span></h3>
-            <p>Motivated Computer Science graduate passionate about teaching and fostering collaborative learning
-                environments. Actively seeking a teaching position in a college environment to kickstart my career in
-                computer science education.</p>
-
-            <div class="social-icons">
-                <a href="https://github.com/user-ss1"><i class="bx bxl-github"></i></a>
-                <a
-                    href="https://www.linkedin.com/in/sanjivani-soni-83b4ab2b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEF7lGsMoR%2FCohaSvgAE0rA%3D%3D"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
-
-        </div>
-        <div class="home-img">
-            <!-- <img src="image.jpg" alt=""> -->
-            <img src="finallyy.png" alt="">
-        </div>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins",sans-serif;
+}
+:root{
+    --bg-color:#000000;
+    --second-bg-color:#131313;
+    --text-color:white;
+    /* --main-color:#00ffee; */
+    /* --main-color:rgb(229, 255, 0); */
+    /* --main-color:rgb(250, 131, 33); */
+    /* --main-color:rgba(237, 130, 53, 0.875); */
+    --main-color:yellow;
+    
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+   
+}
+/* time line -hover to change   edu */
 
 
-    </section>
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:4rem 12% 4rem;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color:var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
 
 
-    <section class="education" id="education">
-        <h2 class="heading">Education</h2>
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    text-shadow: 0 0 25px var(--main-color);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color:var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid  transparent;
 
-        <div class="timeline-items">
-            <!--  -->
-            <div class="timeline-item">
-                <div class="timeline-dot"> </div>
-                <div class="timeline-date">2018 to 2024</div>
-                <div class="timeline-content">
-                    <H3 style="letter-spacing: 2px; ">CERTIFICATES</H3>
-                    <p style="letter-spacing: 1px; text-transform: lowercase;"><strong
-                            style="text-transform: uppercase;">
-                            CERTIFICATES IN PROGRAMMING AND MARKETING</strong><br>
-                        <span class="symbol">•</span> Spring Framework fundaments CERTIFIED FROM infosys (springboard).   
-                        <span class="symbol">•</span> Servlet CERTIFIED FROM infosys (springboard).
-                        <span class="symbol">•</span> JAVA CERTIFIED FROM UDEMY.
-                        <span class="symbol">•</span> tableau certified from coursera.
-                        <span class="symbol">•</span> C++ CERTIFIED FROM LEARNVERN.
-                        <span class="symbol">•</span> C CERTIFIED FROM SOLOLERAN.
-                        <span class="symbol">•</span> SQL CERTIFIED FROM HACKERRANK.
-                        <span class="symbol">•</span> html CERTIFIED FROM SOLOLERAN.
-                        <span class="symbol">•</span> Css CERTIFIED FROM SOLOLERAN.
-                        <span class="symbol">•</span> DITIAL MARKETING CERTIFICATE FROM GOOGLE DIGITAL GARAGE.
-                    </p>
-                    </p>
+}
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding:10rem 12% 10rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15rem;
+ 
+}
+.home-content{
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top:3rem;
+}
+span{
+    color:var(--main-color);
 
-                </div>
-            </div>
-            <!--  -->
-            <div class="timeline-item">
-                <div class="timeline-dot"> </div>
-                <div class="timeline-date">2023 </div>
-                <div class="timeline-content">
-                    <H3 style="letter-spacing: 2px; "> MCA GRADE - 8.1 CGPA</H3>
-                    <p style="letter-spacing: 1px; text-transform: lowercase;"><strong
-                            style="text-transform: uppercase;"> MASTER OF COMPUTER APPLICATION (2021 - 2023) </strong>
-                        <br> <span class="symbol">•</span> BRANCH - COMPUTER APPLICATION.
-                        <span class="symbol">•</span>
-                        COLLEGE-Shri ram institute Of technoloy,jabalpur (madhya pradesh). <span class="symbol">•</span>
-                        RAGIV GANDHI PROUDYOGIKI VISHVIIDHYALAY,BHOPAL.
-                    </p>
-                    </p>
+}
+.logo span{
+    color:var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    
+}
+.home-content h1{
+font-size: 7rem;
+font-weight: 700;
+margin-top: 1.5rem;
+line-height: 1;
 
-                </div>
-            </div>
-            <!--  -->
-            <div class="timeline-item">
-                <div class="timeline-dot"> </div>
-                <div class="timeline-date">2021 </div>
-                <div class="timeline-content">
-                    <H3 style="letter-spacing: 2px; "> BSc GRADE - 74%</H3>
-                    <p style="letter-spacing: 1px; text-transform: lowercase;"><strong
-                            style="text-transform: uppercase;"> bACHELORS OF SCHIENCE (2018 - 2021) </strong>
-                        <br> <span class="symbol">•</span> BRANCH - COMPUTER APPLICATION.
-                        <span class="symbol">•</span> COLLEGE - GOVT.M.H.COLLEGE OF HOMESCIENCE AND SCIENCE FOR WOMEN,
-                        JABALPUR(MADHYA PRADESH).
-                        <span class="symbol">•</span> RANI DURGAWATI VISHVIIDHYALAY JABALPUR
-                    </p>
-                    </p>
-                </div>
-            </div>
-            <!--  -->
-            <div class="timeline-item">
-                <div class="timeline-dot"> </div>
-                <div class="timeline-date">2018 </div>
-                <div class="timeline-content">
-                    <H3 style="letter-spacing: 2px; ">HSSC GRADE - 83%</H3>
-                    <p style="letter-spacing: 1px; text-transform: lowercase;"><strong
-                            style="text-transform: uppercase;"> (HSSC) HIGHER SECONDARY SCHOOL CERTIFICATE ( 2017-2018 )
-                        </strong>
-                        <br> <span class="symbol">•</span> SUBJECTS - (MATHEMATICS + PHYSICS + CHEMISTRY).
-                        <span class="symbol">•</span> SCHOOL-ONKAR NAMDEV SARASWATI VIDHYA MANDIR PATAN , JABALPUR.
-                        MADHYA PRADESH BOARD
-                    </p>
-                    </p>
+}
+.home-img{
+    border-radius: 50%;
+    width: 21rem; /* Width ko aapki pasand ke hisab se adjust karein */
+    height: auto; /* Auto height maintain karne ke liye */
+    
+}
+.home-img img,.home-img img{
+    position: relative;
+    top:3rem;
+   
+    width: 15vw;
+    border-radius: 30%;
+    box-shadow:0 0  25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 
-                </div>
-            </div>
+}
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
 
-            <!--  -->
-            <div class="timeline-item">
-                <div class="timeline-dot"> </div>
-                <div class="timeline-date">2016 </div>
-                <div class="timeline-content">
-                    <H3 style="letter-spacing: 2px; "> SSC GRADE - 90%</H3>
-                    <p style="letter-spacing: 1px; text-transform: lowercase;"><strong
-                            style="text-transform: uppercase;"> (SSC) SECONDARY SCHOOL CERTIFICATE ( 2015-2016 )
-                        </strong>
-                        <br> <span class="symbol">•</span> SCHOOL-ONKAR NAMDEV SARASWATI VIDHYA MANDIR PATAN (JABALPUR).
-                        MADHYA PRADESH BOARD
-                    </p>
-                    </p>
+}
+.home-content p{
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color); 
+    font-size: 2.5rem;
+    border-radius:50%;
+    color:var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    /* transition:  0.3s ease-in-out; */
 
-                </div>
-            </div>
-        </div>
-        <!--  
-          <div class="timeline-item">
-            <div class="timeline-dot">  </div>
-                <div class="timeline-date">2021 </div>
-                    <div class="timeline-content">
-                        <H3 style="letter-spacing: 2px;"> MCA(2021-2023)</H3>
-                        <p style="letter-spacing: 1px;">Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Distinctio aperiam rem, ut earum ratione 
-                            labore voluptatibus mollitia quo velit accusantium
-                             harum fuga quisquam vero eos 
-                           eaque dolorem quidem repellat? Beatae!</p> 
-              
-            </div>
-        </div>
+    transition: transform 0.3s ease, box-shadow 0.6s ease, background-color 0.3s ease, color 0.3s ease;
+         
+}
+/* 
+.social-icons a:hover{
+    color:var(--text-color);
+    transform: scale(1.3)translateY();
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+
+} */
+
+.social-icons a:hover {
+    color: var(--main-color);
+    transform: scale(1.3) rotate(360deg);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--text-color);
+}
+
+.btn{
+    display: inline-block;
+    padding:1rem 2.8rem;
+    background:var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color:black;
+    border:2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.btn-group{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    color:var(--main-color);
+    border: 2px solid 25px var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(2):hover{
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+
+    content:"Web Developer";
+    color:var(--main-color);
+    animation: words 20s infinite ;
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position:absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: curser 0.6s infinite,typing 20s steps(14) infinite;
+}
+@keyframes curser {
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words {
+    0%,
+    20%{
+        content: "Frontent Developer";
+    }
+    21%,
+    40%{
+        content: "Backend Developer";
+    }
+    41%,
+    60%{
+        content: "Full Stack Developer";
+    }
+    61%,
+    80%{
+        content: "Java Developer";
+    }
+    81%,
+    100%{
+        content: "Web Developer";
+    }
+}
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width:0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+.heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+.education{
+    position: relative;
+    max-width: 1200px;
+    /* margin: 100px auto; */
+  margin: 100px auto;
+    padding:100px 15px;
+    background: var(--second-bg-color);
+}
+.education h2{
+    margin-bottom: 5rem;
+}
+.timeline-items{
+   
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-items::before{
+      
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    /* left:calc(50% - 1px); */
+    /*  */
+    top:0;
+left: 50%;
+/* z-index:-1; */
+animation: a 6s linear forwards;
+}
+@keyframes a{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+/*  */
+
+
+
+
+/*  */
+}
+
+/*  */
+.symbol{
+    color: var(--main-color);
+    /* font-size: 4rem; */
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 1px; /* Adjust spacing as needed */
+    margin-left: 6px;
+    vertical-align: middle;
+    
+  
+}
+
+/*  */
+
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right:calc(50% + 30px);
+    text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+    z-index: 10;
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top:10px;
+    
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+  color:white;
+  margin: 6px 0 15px;
+}
+.timeline-content{ 
+    background-color: var(--bg-color);
+    border:3px solid var(--main-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    z-index:-1;
+}
+/*  */
+.timeline-item{ position: relative;
+    animation: md 1s linear forwards;
+    position:relative;
+    opacity: 0; 
+}
+
+
+@keyframes md{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeline-item:nth-child(1){
+    animation-delay: 0s;
+}
+.timeline-item:nth-child(2){
+    animation-delay: 1s;
+}
+.timeline-item:nth-child(3){
+    animation-delay: 2s;
+}
+.timeline-item:nth-child(4){
+    animation-delay: 3s;
+}
+.timeline-item:nth-child(5){
+    animation-delay: 4s;
+}.timeline-item:nth-child(6){
+    animation-delay: 5s;
+}
+/*  */
+.timeline-content h3 {
+    color: var(--main-color);
+}
+.timeline-content:hover h3 {
+    color: white;
+}
+.timeline-content:hover p {
+    color: var(--main-color);
+    
+}
+.timeline-content:hover .symbol{
+    color: white;
+}
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.timeline-content h3{
+    font-size: 20px;
+    /* color: white; */
+    margin: 0 0  10px;
+    font-weight: 500;
+}
+.timeline-content p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+}
+
+.skills{
+    background: var(--bg-color);
+    color: black;
+}
+.skills h2,.education h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.skills-container .tech{
+    display: grid;
+     grid-template-columns: repeat(3,1fr); 
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    
+    justify-content: center; 
+   
+}
+/* .tech> div {
+    border: 1px solid #ccc;
+    padding: 10px;
+  } */
+
+  /* .skills-container .tech > .skills-box:nth-last-child(2):nth-child(3n+1) {
+    grid-column: 1 / 2;
+    transform: translateX(50%);
+}
+
+.skills-container .tech > .skills-box:nth-last-child(2):nth-child(3n+2) {
+    grid-column: 2 / 3;
+    transform: translateX(50%);
+}
+
+.skills-container .tech > .skills-box:nth-last-child(1):nth-child(3n+1) {
+    grid-column: 2 / 3;
+    transform: translateX(-50%);
+}
+
+.skills-container .tech > .skills-box:nth-last-child(1):nth-child(3n+2) {
+    grid-column: 3 / 4;
+    transform: translateX(-50%);
+}
+ */
+
+  /*  */
+ 
+.skills-box{
+    background-color: var(--main-color);
+    height: 40rem;
+    border-radius: 3rem;
+    border: 0.5rem solid transparent;
+    cursor: pointer;
+    transition: 0.4 ease-in-out;
+}
+    
+.skills-box:hover{
+    background: white;
+    color: black;
+    border:5px solid var(--main-color);
+    transform: scale(1.03);
+    
+}
+.skills-box:hover h4{
+    /* color: var(--main-color) */
+    color: transparent; /* Text ki asli color ko transparent karein */
+    text-shadow: 
+    0 0 0 yellow,
+        0 0 0.5rem black;
+        
+         /* Outline ka color */
+        /* Outline ke andar ka color */
+}
+.skills-box  .skills-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-height: 20rem;
+    justify-content: left;
+    align-items: baseline;
+    padding: 4rem 4rem;
+ 
+}
+
+.skills-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-break: 2;
+    
+}
+.skills-info p,li,h5{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin:auto;
+    
+    
+ 
+}
+/* .skills-info h5{
+    text-transform: uppercase;
+
+} */
+.contact{
+    margin-bottom: 3rem;
+    color:white;
+
+}
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+.contact form.input-box{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,.contact form textarea{
+width: 100%;
+padding:2.5rem;
+font-size: 1.8rem;
+color: var(--text-color);
+background: var(--bg-color);
+border-radius: 2rem;
+border: 2px solid var(--main-color);
+margin: 1.5rem  0;
+resize: none;
+
+}
+.contact form .btn{
+margin-top: 2rem;
+text-align: center;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding:40px 0;
+    background-color: var(--second-bg-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color:var(--main-color)
+}
+.footer .social a{
+    font-size: 25px;
+    color: var(--main-color);
+    border:2px solid var(--main-color);
+    width: 42px;
+    height:42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover{
+
+    transform: scale(1.2)translateY(-10px);
+    background-color: var(--main-color);
+    color:black;
+    box-shadow: 0 0 25px var(--main-color);
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color:white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid var(--main-color);
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color:white;
+}
+
+@media (max-width:1285px) {html{
+    font-size: 55%;
+}
+    /* .skills-container .tech{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin:0 5rem;
+    }    */
+}
+@media (min-width:958px) {
+    .skills-container .tech > .skills-box:nth-last-child(2):nth-child(3n+1) {
+        grid-column: 1 / 2;
+        transform: translateX(50%);
+    }
+
+    .skills-container .tech > .skills-box:nth-last-child(2):nth-child(3n+2) {
+        grid-column: 2 / 3;
+        transform: translateX(50%);
+    }
+
+    .skills-container .tech > .skills-box:nth-last-child(1):nth-child(3n+1) {
+        grid-column: 2 / 3;
+        transform: translateX(-50%);
+    }
+
+    .skills-container .tech > .skills-box:nth-last-child(1):nth-child(3n+2) {
+        grid-column: 3 / 4;
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width:1052px){
+.education{
+    margin: 10REM 2REM;
+}
+    .skills-container .tech{
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 2fr)); /* Adjust the minmax value as needed */
+ 
+    }
+}
+@media(max-width:991px){
+    header{padding:2rem 3%;}
+    section{padding:10rem 3% 2rem;}
+    .timeline-items::before{
+        left:7px;
+    }
+    .timeline-item:nth-child(odd){
+
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),.timeline-item:nth-child(even){
+
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left:0;
+    }
+    .skills{
+        padding-bottom: 7rem;
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding:2rem 3%;
+    }
+}
+@media(max-width:915px){
+    #menu-icon{
+        display: block}
+    .navbar{
+        position: absolute;
+        top:100%;
+        right:0;
+        width:50%;
+        padding:1rem 3%;
+        background:rgba(0,0,0,0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color:white
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin:5rem 4rem;
+        gap: 1rem;
+    }
+    .home-content h3{
+
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+
+.home-content h1{
+    font-size: 8rem;
+    margin-top: 3rem;
+}
+.home-content p{
+    max-width: 600px;
+    margin:0 auto;
+}
+.home-img img{
+    width: 56vw;
+}
+.skills h2{
+    margin-bottom: 3rem;
+}
+/* .skills-container .tech{
+    grid-template-columns: repeat(2,1fr);
+  
+} */
+}
+
+@media screen and (max-width:619px){
+    .timeline-items{
+        margin: 50px auto;
+    }
+    .timeline-items::before{
+        left:9px;
+    }
+    .timeline-item{
+        width:100%;
+        /* padding-left: 80px;
+        padding-right: 25px; */
+    }
+    .skills-box {
+            height: auto;
+            
+            padding: 0.5rem;
+         
+        }
+        .skills-container .tech{
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Adjust the minmax value as needed */
+ 
           
-          <div class="timeline-item">
-            <div class="timeline-dot">  </div>
-                <div class="timeline-date">2021 </div>
-                    <div class="timeline-content">
-                        <H3 style="letter-spacing: 2px;"> MCA(2021-2023)</H3>
-                        <p style="letter-spacing: 1px;">Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Distinctio aperiam rem, ut earum ratione 
-                            labore voluptatibus mollitia quo velit accusantium
-                             harum fuga quisquam vero eos 
-                           eaque dolorem quidem repellat? Beatae!</p> 
-              
-            </div>
-        </div>-->
-
-        </div>
-
-
-
-
-    </section>
-
-
-    <!-- <section  class="skills" id="skills">
-    <h2 class="heading">Skills</h2>
-
-    <div class="skills-container">
-        <div class="skills-box">
-            <div class="skills-info">
-            <h4>Java Developer</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                elit. At, culpa. Asperiores fugiat quis laborum ea
-                 quae doloribus .</p>
-                </div>
-            </div>
-          
-            <div class="skills-box">
-                <div class="skills-info">
-                <h4>Java Developer</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                    elit. At, culpa. Asperiores fugiat quis laborum ea
-                      enim, iste ex ipsum.</p>
-                    </div>
-                </div>
-               
-            <div class="skills-box">
-                <div class="skills-info">
-                <h4>Java Developer</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                    elit. At, culpa. Asperiores fugiat quis laborum ea
-                    </div>
-                </div>
-               
-            <div class="skills-box">
-                <div class="skills-info">
-                <h4>Java Developer</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                    repellendus rerum, enim, iste ex ipsum.</p>
-                    </div>
-                </div>
-    </div>
-
-</section>
- -->
-
-
-    <!-- second-  section for skills -->
-
-    <section class="skills" id="skills">
-        <h2 class="heading">Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="tech">
-
-
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Programming Languages</h4>
-                        <p>Proficient in <strong>C, C++, Java, and JavaScript</strong>, enabling the development of
-                            diverse software solutions with robust performance and efficiency.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Web Development</h4>
-                        <p>Experienced in <strong>HTML, CSS, JSP, and React.js</strong>, creating responsive and dynamic
-                            web applications that enhance user experience.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Frameworks & Technologies</h4>
-                        <p>Skilled in <strong>Spring Framework, Servlet, JDBC & Java EE</strong> for building robust and
-                            scalable enterprise applications, ensuring high performance and security.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Database Management</h4>
-                        <p>Experienced with <strong>MySQL and SQL</strong>, ensuring efficient data storage, retrieval,
-                            and manipulation to support application functionality.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Tools</h4>
-                        <p>Proficient in using <strong>Eclipse, Code::Blocks, VSCode, and Canva</strong> for coding,
-                            debugging, and design purposes, facilitating streamlined development processes.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>DSA</h4>
-                        <p><strong> Data Structures and Algorithms in Java </strong>through active implementation and
-                            daily learning, striving for proficient command and deeper understanding.</p>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Other Skills</h4>
-                        <p>Basic knowledge of <strong>data visualization with Tableau</strong> and fundamentals of
-                            <strong>digital marketing</strong> for comprehensive project insights and effective online
-                            presence.</p>
-                    </div>
-                </div>
-
-
-
-
-                <!-- Additional Skills -->
-                <!-- <div class="additional-skills"> -->
-                <div class="skills-box">
-                    <div class="skills-info">
-                        <h4>Additional Skills</h4>
-                        <ul>
-                            <li><strong>
-                                    <h5>Analytical Thinking </h5>
-                                </strong> </li>
-                            <li><strong>
-                                    <h5>Adaptability
-                                </strong> </h5>
-                            </li>
-                            <li><strong>
-                                    <h5>Technical Proficiency </h5>
-                                </strong> </li>
-                            <li><strong>
-                                    <h5>Visual Design Skills </h5>
-                                </strong> </li>
-                            <li><strong>
-                                    <h5>Continuous Learning and Development </h5>
-                                </strong> </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- </div> -->
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <!-- tableau -->
-
-    <!-- Projects-->
-    <section class="visulizations" id="visulizations">
-        <h1 class="text-center border titles" id="title"><strong>TABLEAU VISUALIZATION</strong></h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="well">
-                        <a class="thumbnail"
-                            href="https://public.tableau.com/app/profile/sanjivani.soni/viz/SalesTrend_Report/Dashboard1"
-                            target="_blank">
-                            <img src="Dashboard 1.png" class="project-img" alt="Dashboard 1">
-                        </a>
-                        <h2 id="projectTitle"><strong>Title - dashboard</strong></h2>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni" target="_parent"
-                            alt="Live Demo">
-                            <h2 id="liveDemo"><strong>profile view</strong></h2>
-                        </a>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni/viz/SalesTrend_Report/Dashboard1"
-                            target="_blank" alt="Source Code">
-                            <h2 id="sourceCode"><strong>sheet view</strong></h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="well">
-                        <a class="thumbnail"
-                            href="https://public.tableau.com/app/profile/sanjivani.soni/viz/TB2_16558863712190/Sheet1"
-                            target="_blank">
-                            <img src="Sheet 1 (1).png" class="project-img" alt="Sheet 1 (1)">
-                        </a>
-                        <h2 id="projectTitle"><strong>Title - sales report</strong></h2>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni" target="_parent"
-                            alt="Live Demo">
-                            <h2 id="liveDemo"><strong>profile view</strong></h2>
-                        </a>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni/viz/TB2_16558863712190/Sheet1"
-                            target="_blank" alt="Source Code">
-                            <h2 id="sourceCode"><strong>sheet view</strong></h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="well">
-                        <a class="thumbnail"
-                            href="https://public.tableau.com/app/profile/sanjivani.soni/viz/work2_16556355253780/Sheet1"
-                            target="_blank">
-                            <img src="Sheet 1 (2).png" class="project-img" alt="Sheet 1 (2)">
-                        </a>
-                        <h2 id="projectTitle"><strong>Title - profit loss report</strong></h2>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni" target="_parent"
-                            alt="Live Demo">
-                            <h2 id="liveDemo"><strong>profile view</strong></h2>
-                        </a>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni/viz/work2_16556355253780/Sheet1"
-                            target="_blank" alt="Source Code">
-                            <h2 id="sourceCode"><strong>sheet view</strong></h2>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="well">
-                        <a class="thumbnail"
-                            href="https://public.tableau.com/app/profile/sanjivani.soni/viz/work2_16556355253780/Sheet1"
-                            target="_blank">
-                            <img src="Sheet 1.png" class="project-img" alt="Sheet 1">
-                        </a>
-                        <h2 id="projectTitle"><strong>Title - day to day reports</strong></h2>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni" target="_parent"
-                            alt="Live Demo">
-                            <h2 id="liveDemo"><strong>profile view</strong></h2>
-                        </a>
-                        <a href="https://public.tableau.com/app/profile/sanjivani.soni/viz/work2_16556355253780/Sheet1"
-                            target="_blank" alt="Source Code">
-                            <h2 id="sourceCode"><strong>sheet view</strong></h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact<span> Me</span></h2>
-
-        <form id="contactForm">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-box">
-                    <input type="tel" pattern="[0-9]{10}" maxlength="10" id="phoneNumber" name="phoneNumber"
-                        placeholder="Phone Number" required>
-                    <input type="text" id="subject" name="subject" placeholder="Subject">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <textarea id="message" name="message" placeholder="Your Message" cols="30" rows="10"
-                    required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </div>
-        </form>
-        </section>
-
-        <footer class="footer">
-
-            <div class="social">
-
-                <a href="https://github.com/user-ss1"><i class="bx bxl-github"></i></a>
-                <a
-                    href="https://www.linkedin.com/in/sanjivani-soni-83b4ab2b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEF7lGsMoR%2FCohaSvgAE0rA%3D%3D"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-
-            </div>
-
-            <ul class="list">
-                <li><a href="#"></a>FAQ</li>
-                <li><a href="#"></a>Skills</li>
-                <li><a href="#"></a>About Me</li>
-                <li><a href="#"></a>Contact</li>
-            </ul>
-
-            <p class="copyright">© 2024 Sanjivani Soni | All Rights Reserved</p>
-        </footer>
-
-
-
-        <script>
-            // navbar
-            // JavaScript for the mobile menu
-            const menuIcon = document.getElementById('menu-icon');
-            const navbar = document.querySelector('.navbar');
-
-            menuIcon.addEventListener('click', () => {
-                navbar.classList.toggle('active');
-            });
-
-
-
-            // 
-
-            const hireBtn = document.querySelector('.btn-group a:nth-of-type(1)');
-            const contactBtn = document.querySelector('.btn-group a:nth-of-type(2)');
-
-            contactBtn.addEventListener('mouseover', function () {
-                hireBtn.style.backgroundColor = 'black';
-                hireBtn.style.color = 'yellow';
-            });
-
-            contactBtn.addEventListener('mouseout', function () {
-                hireBtn.style.backgroundColor = 'yellow';
-                hireBtn.style.color = 'black';
-            });
-
-
-
-            document.getElementById("contactForm").addEventListener("submit", function (event) {
-                event.preventDefault(); // Form submission ko rokne ke liye
-
-                // Form data ko validate karna
-                var fullName = document.getElementById("fullName").value;
-                var email = document.getElementById("email").value;
-                var phoneNumber = document.getElementById("phoneNumber").value;
-                var subject = document.getElementById("subject").value;
-                var message = document.getElementById("message").value;
-
-                if (fullName && email && message) { // Zaroori fields check karna
-                    // Message display karna
-                    alert("Currently this form is not accepting responses. Please message me on LinkedIn.");
-
-                    // LinkedIn profile pe redirect karna
-                    window.open("https://www.linkedin.com/in/sanjivani-soni-83b4ab2b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEF7lGsMoR%2FCohaSvgAE0rA%3D%3D", "_blank"); // Aapka LinkedIn profile ka URL yahan daalein
-                } else {
-                    // Agar zaroori fields khali hai to error message display karna
-                    alert("Please fill out all required fields.");
-                }
-            });
-
-
-
-            window.addEventListener('scroll', function () {
-                const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('nav a');
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        const id = section.getAttribute('id');
-                        const correspondingNavLink = document.querySelector(`nav a[href="#${id}"]`);
-                        correspondingNavLink.classList.add('active');
-                    }
-                });
-            });
-
-        </script>
-
-</body>
-
-</html>
+        }
+        .skills-info h4 {
+            font-size: 1.6rem;
+        }
+    
+        
+
+        .skills-info p,h5,li,ul{
+            font-size: 1.1rem;
+            font-weight: 600;
+            max-height: 100px;
+            line-height: 1.2;
+            margin:auto;
+            
+         
+        }
+        .skills-box  .skills-info{
+            padding: 3rem;
+        }
+       
+    }
+    @media screen and (max-width:655px){
+
+        
+    }
+    @media (max-width: 320px) {
+        .skills-container {
+            /* grid-template-columns: 1fr; */
+             /* Single column layout */
+
+             grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Adjust the minmax value as needed */
+ 
+            gap: 1rem;
+            
+        }
+    
+        .skills-box {
+            padding: 1rem;
+        }
+    
+        .skills-info h4 {
+            font-size: 2rem;
+        }
+    
+        .skills-info p{
+            font-size: 1rem;
+        }
+        .heading{
+            font-size: 5rem;
+            text-align: center;
+            margin: 5rem 0;
+        }
+    }
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+
+
+:root{
+    --bg-color:#000000;
+    --second-bg-color:#131313;
+    --text-color:white;
+    /* --main-color:#00ffee; */
+    /* --main-color:rgb(229, 255, 0); */
+    /* --main-color:rgb(250, 131, 33); */
+    /* --main-color:rgba(237, 130, 53, 0.875); */
+    --main-color:yellow;
+    
+}
+section {
+    padding: 50px 10%;
+}
+.text-center {
+    text-align: center;
+}
+.titles {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.col-md-6 {
+    width: 48%;
+    margin-bottom: 2rem;
+}
+.well {
+    background: #131313;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.well:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.thumbnail img {
+    width: 100%;
+    border-radius: 1rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--main-color);
+}
+h2 strong {
+    color: var(--main-color);
+}
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+a:hover {
+    text-decoration: underline;
+}
+#title,.education h2,.skills h2{
+    font-size: 5rem;
+    text-align: center;
+    margin: 5rem 0;
+    /* font-weight: 400; */
+}
+
+@media screen and (max-width:410px){
+    #title{
+        font-size: 3rem;
+        text-align: center;
+        margin: 3rem 0;
+        /* font-weight: 400; */
+    }
+
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
