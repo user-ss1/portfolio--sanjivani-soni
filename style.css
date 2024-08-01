@@ -142,6 +142,8 @@ line-height: 1;
 
 }
 .home-content p{
+    letter-spacing: 0.15rem;
+    word-spacing: 0.3rem;
     font-size: 1.65rem;
     font-weight: 500;
     line-height: 1.8;
